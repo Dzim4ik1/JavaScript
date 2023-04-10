@@ -1,5 +1,5 @@
-const object = {
-    fullname:'Дмитрий Вожжов',
+const person = {
+    fullName:'Дмитрий Вожжов',
     age: 26,
     anyInfoAboutYourPlace: {
         galaxy: 'Milky Way',
@@ -7,21 +7,23 @@ const object = {
         planetNumberFromTheSun: 3,
        
     },
-    hascats: false,
+    hasCats: false,
     hobbies: ['run','computer games', 'reading books'],
     greeting(){
-        `hey, my name is ${this.fullname}`
+       return `hey, my name is ${this.fullName}`
     }
 
 }
 
-const copyObject = { ...object, occupation:{
+const copyPerson = { ...person, occupation:{
     work: 'manager',
     loveWork: false
 }};
 
-console.log(copyObject.occupation.work);
+console.log(copyPerson.occupation.work);
 
 
 const text = document.getElementById('text');
-text.innerHTML = copyObject.occupation.work;
+text.innerHTML = copyPerson.occupation.work;
+
+console.log(person.greeting())
